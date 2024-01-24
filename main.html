@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>요리조리</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="status_bar">
+            <div id="currentTime"></div>
+            <img src="img/statusBar-icon.png" alt="statusBar-icon" class="statusBar-icon">
+        </div>
+        <div class="img_container">
+            <img src="img/youtube title.png" alt="youtube_title" class="youtube_title">
+            <div class="video-container">
+                <iframe width="100%" height="222" src="https://www.youtube.com/embed/qWbHSOplcvY" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-explain">
+            <p class="video-title">성공률 100% 돼지고기 김치찌개</p>
+            <p class="video-detail">
+                <span class="조회수">조회수 1149만회</span>
+                <span class="dot">·</span>
+                <span class="n년전">3년 전</span>
+                <span class="해시태그">#백종원 #김치찌개 #돼지고기</span>
+                <span class="더보기">...더보기</span>
+            </p>
+        </div>
+        <div class="profile">
+            <img src="img/백종원.png" alt="백종원" class="백종원-사진">
+            <div class="profile-details">
+                <span class="백종원-이름">백종원 PAIK JONG WON</span>
+                <span class="구독자수">607만</span>
+            </div>
+            <button class="구독버튼">구독</button>
+        </div>
+        <div class="video-like">
+            <button class="like">
+                <img src="img/like.png" alt="like" class="like-icon">
+                <span class="like-text">10만</span>
+                <img src="img/line.png" alt="line" class="line">
+            </button>
+            <button class="dislike">
+                <img src="img/dislike.png" alt="dislike" class="dislike-icon">
+            </button>
+            <button class="share">
+                <img src="img/share.png" alt="share" class="share-icon">
+                <span class="share-text">공유</span>
+            </button>
+            <button class="save">
+                <img src="img/save.png" alt="save" class="save-icon">
+                <span class="save-text">저장</span>
+            </button>
+        </div>
+        <div class="video-comment">
+            <div class="comment-box">
+                <div class="comment-title">
+                    <span class="댓글">댓글 2.8천</span>
+                </div>
+                <div class="comment-subscriber">
+                    <div class="profile-subscriber">
+                        <span class="text-inside-circle">y</span>
+                    </div>
+                    <div class="comments">진짜 맛있어요!</div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <div class="modal-grabber"></div>
+                    <div class="modal-header-contents">
+                        <img src="img/modal-header-thumbnail.png" alt="thumbnail" class="modal-header-thumbnail">
+                        <div class="modal-header-text">
+                            <span class="modal-header-contents-title">성공률 100% 돼지고기 김치찌개</span>
+                            <span class="youtube-com">youtube.com</span>
+                        </div>
+                        <img src="img/modal-header-closeButton.png" alt="close" class="modal-header-closeButton"
+                            onclick="closeModal()">
+                    </div>
+                </div>
+                <div class="divideLine1"></div>
+                <div class="modal-contactRow">
+                    <div class="modal-profile1">
+                        <div class="m-m1">
+                            <img src="img/Mask.png" alt="profile1" class="modal-profile1-img">
+                            <img src="img/Messages.png" alt="messages" class="modal-message1-img">
+                        </div>
+                        <span class="modal-profile1-name">정지영</span>
+                    </div>
+                    <div class="modal-profile2">
+                        <div class="m-m2">
+                            <img src="img/Mask.png" alt="profile2" class="modal-profile2-img">
+                            <img src="img/Messages.png" alt="messages" class="modal-message2-img">
+                        </div>
+                        <span class="modal-profile2-name">황지은</span>
+                    </div>
+                    <div class="modal-profile3">
+                        <div class="m-m3">
+                            <img src="img/Mask.png" alt="profile3" class="modal-profile3-img">
+                            <img src="img/Messages.png" alt="messages" class="modal-message3-img">
+                        </div>
+                        <span class="modal-profile3-name">김지윤</span>
+                    </div>
+                    <div class="modal-profile4">
+                        <div class="m-m4">
+                            <img src="img/Mask.png" alt="profile4" class="modal-profile4-img">
+                            <img src="img/Messages.png" alt="messages" class="modal-message4-img">
+                        </div>
+                        <span class="modal-profile4-name">이지우</span>
+                    </div>
+                    <div class="modal-profile5">
+                        <div class="m-m5">
+                            <img src="img/Mask.png" alt="profile5" class="modal-profile5-img">
+                            <img src="img/Messages.png" alt="messages" class="modal-message5-img">
+                        </div>
+                        <span class="modal-profile5-name">박지연</span>
+                    </div>
+                </div>
+                <div class="divideLine2"></div>
+                <div class="modal-appIconRow">
+                    <div class="appIcon1">
+                        <img src="img/Airdrop.png" class="airdropIcon">
+                        <span class="airdropText">Airdrop</span>
+                    </div>
+                    <div class="appIcon2" onclick="openSecondPopup()">
+                        <img src="img/요리조리.png" class="요리조리Icon">
+                        <span class="요리조리Text">요리조리</span>
+                    </div>
+                    <div class="appIcon3">
+                        <img src="img/Mail.png" class="mailIcon">
+                        <span class="mailText">메일</span>
+                    </div>
+                    <div class="appIcon4">
+                        <img src="img/Memo.png" class="memoIcon">
+                        <span class="memoText">메모</span>
+                    </div>
+                    <div class="appIcon5">
+                        <img src="img/Messages.png" class="messageIcon">
+                        <span class="messageText">메시지</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="action1">
+                        <button class="action1-1box">
+                            <div class="action1-1box-contents">
+                                <span class="action1-1box-text">복사</span>
+                                <img src="img/복사.png" alt="복사" class="action1-1box-icon">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="action2">
+                        <button class="action2-1box">
+                            <div class="action2-1box-contents">
+                                <span class="action2-1box-text">읽기 목록에 추가</span>
+                                <img src="img/읽기.png" alt="읽기" class="action2-1box-icon">
+                            </div>
+                        </button>
+                        <button class="action2-2box">
+                            <div class="action2-2box-contents">
+                                <span class="action2-2box-text">책갈피 추가</span>
+                                <img src="img/책갈피.png" alt="책갈피" class="action2-2box-icon">
+                            </div>
+                        </button>
+                        <button class="action2-3box">
+                            <div class="action2-3box-contents">
+                                <span class="action2-3box-text">즐겨찾기에 추가</span>
+                                <img src="img/즐겨찾기.png" alt="즐겨찾기" class="action2-3box-icon">
+                            </div>
+                        </button>
+                        <button class="action2-4box">
+                            <div class="action2-4box-contents">
+                                <span class="action2-4box-text">페이지에서 찾기</span>
+                                <img src="img/페이지.png" alt="페이지" class="action2-4box-icon">
+                            </div>
+                        </button>
+                        <button class="action2-5box">
+                            <div class="action2-5box-contents">
+                                <span class="action2-5box-text">홈 화면에 추가</span>
+                                <img src="img/홈화면.png" alt="홈화면" class="action2-5box-icon">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="action3">
+                        <button class="action3-1box">
+                            <div class="action3-1box-contents">
+                                <span class="action3-1box-text">마크업</span>
+                                <img src="img/마크업.png" alt="마크업" class="action3-1box-icon">
+                            </div>
+                        </button>
+                        <button class="action3-2box">
+                            <div class="action3-2box-contents">
+                                <span class="action3-2box-text">프린트</span>
+                                <img src="img/프린트.png" alt="프린트" class="action3-2box-icon">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="other-videos">
+            <img src="img/김치전.png" alt="김치전 레시피" class="김치전">
+        </div>
+        <div class="toolbar">
+            <div class="toolbar-buttons">
+                <div class="toolbar-icon1">
+                    <img src="img/toolbar-icon1.png" class="toolbar-icon1-img">
+                </div>
+                <div class="toolbar-icon2">
+                    <img src="img/toolbar-icon2.png" class="toolbar-icon2-img">
+                </div>
+                <div class="toolbar-icon3" id="toolbarIcon" onclick="openModal()">
+                    <img src="img/toolbar-icon3.png" class="toolbar-icon3-img">
+                </div>
+                <div class="toolbar-icon4">
+                    <img src="img/toolbar-icon4.png" class="toolbar-icon4-img">
+                </div>
+                <div class="toolbar-icon5">
+                    <img src="img/toolbar-icon5.png" class="toolbar-icon5-img">
+                </div>
+            </div>
+        </div>
+        <div class="popup-background" id="popupBackground" >
+            <div class="second-popup">
+            <div class="second-popup-content" id="secondPopup">
+                <img src="img/팝업아이콘.png" alt="팝업"class="popup-icon">
+                <span class="popup-text">레시피를 저장하고 있어요...</span>
+            </div>
+            </div>
+        </div>
+        <div class="popup-background" id="newPopupBackground" style="display: none;">
+            <div class="second-popup2" id="newSecondPopup">
+                <div class="second-popup-content2">
+                    <img src="img/recipeSaved.png" alt="recipe saved" class="popup-icon2">
+                    <span class="popup-text2">레시피 저장 완료!</span>
+                </div>
+                <div class="dropdown">
+                    <select name="one" class="dropdown-select">
+                      <option value="">기본 폴더</option>
+                      <option value="1">비건</option>
+                      <option value="2">다이어트</option>
+                      <option value="3">디저트</option>
+                    </select>
+                </div>
+                <div class="recipeSavedButtons">
+                    <button class="close-button2">삭제</button>
+                    <button class="close-button3">수정</button>
+                    <button class="close-button4" onclick="closeNewSecondPopup()">확인</button>
+                </div>
+            </div>
+        </div>
+       
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

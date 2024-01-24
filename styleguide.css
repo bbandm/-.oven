@@ -1,0 +1,12 @@
+:root {
+    --tomato-red: rgba(255, 99, 71, 1);
+    --soft-green: rgba(143, 204, 143, 0.8);
+    --light-peach: rgba(255, 228, 196, 1);
+    --dark-grey: rgba(51, 51, 51, 1);
+    --dark-grey-30: rgba(51, 51, 51, 0.3);
+    --labelsprimary-dark: rgba(255, 255, 255, 1);
+    --bgprimary-dark-base: rgba(0, 0, 0, 1);
+    --labelsprimary: rgba(0, 0, 0, 1);
+    --bgprimary: rgba(255, 255, 255, 1);
+  }
+  

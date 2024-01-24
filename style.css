@@ -1,0 +1,1410 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pretendard'
+}
+
+.main {
+    width: 393px;
+    height: 100vh;
+    position: realtive;
+    background-color: #ffffff; /* Optional: Add border for better visibility */
+}
+.status_bar {
+    display: flex;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+#currentTime{
+    width: 138px;
+    height: 22px;
+    color: white;
+    font-size: 16px;
+    font-weight: 590;
+    text-align: center;
+    padding-top: 12px;
+}
+.statusBar-icon{
+    margin-left: 112px;
+    width: 143px;
+    height: 54px;
+    margin-top: -6px;
+}
+
+.img_container {
+    display: block;
+    
+}
+.youtube_title {
+    width: 100%;
+}
+.video-container {
+    margin-top: -4px;
+    overflow: hidden;
+}
+.video-explain{
+    width: 100%;
+    margin-top: -3.5px;
+    height: 70px;    
+    background-color: white;
+}
+.video-title {
+    font-weight:600;
+    margin-top: 0px;
+    padding-top: 16px;
+    padding-left: 16px;
+    background-color: white;
+    font-size: 18px;
+    line-height: 13px; 
+    letter-spacing: 0.2px;
+    margin-bottom: 0px;
+    color: #0f0f0f;
+}
+.video-detail{
+    font-size: 12px;
+    margin-top: 12px;
+    font-weight: 400;
+    padding-left: 16px;
+}
+.조회수{
+    width: 4px;
+    color: #606060;
+}
+.dot{
+    padding-left: 2px;
+    color: #606060;
+}
+.n년전{
+    padding-left: 2px;
+    color: #606060;
+}
+.해시태그{
+    cursor: pointer;
+    padding-left: 8px;
+    color: #606060;
+}
+.더보기{
+    cursor: pointer;
+    padding-left: 8px;
+    color: #0f0f0f;
+}
+.profile{
+    width: 100%;
+    height: 52px;
+    margin: 0px;
+    background-color: white;
+    display: flex;
+}
+.백종원-사진 {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 88px;
+    margin: 0px;
+    padding-left: 16px;
+    padding-top: 8px;
+    
+}
+.profile-details{
+    padding-top: 14px;
+    margin: 0;
+}
+.백종원-이름{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 12px;
+    width: 147px;
+    height: 13px;
+    padding-top: 0px;
+    color: #0f0f0f;
+
+}
+.구독자수{
+    cursor: pointer;
+    color: #6F6F6F;
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 6px;
+    margin-left: 6px;
+}
+
+.구독버튼 {
+    cursor: pointer;
+    background-color: #0f0f0f;
+    width: 56px;
+    height: 36px;
+    color: white;
+    border-radius: 18px;
+    font-family: 'Pretendard';
+    margin-left: 60px;
+    margin-top: 8px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.구독버튼::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.구독버튼:hover::before {
+    opacity: 1;
+}
+.video-like{
+    background-color: white;
+    display: flex;
+    height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.like {
+    border: none; /* 테두리 없앰 */
+    border-radius: 18px 0px 0px 18px;
+    background: #F2F2F2;
+    width: 84px;
+    height: 36px;
+    transition: background-color 0.3s ease;
+    margin-left: 16px;
+    display: flex;
+    padding: 0px;
+}
+
+.like:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.dislike {
+    border: none; /* 테두리 없앰 */
+    border-radius: 0px 18px 18px 0px;
+    background: #F2F2F2;
+    width: 52px;
+    height: 36px;
+    transition: background-color 0.3s ease;
+    
+    display: flex;
+    padding: 0px;
+}
+
+.dislike:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+
+.like-icon{
+    width: 20px;
+    height: 20px;    
+    margin-left: 12px;
+    margin-top: 8px;
+    padding-right: 8px;
+}
+.like-text{
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 11px;
+    line-height: 13px; /* 92.857% */
+    letter-spacing: 0.1px;
+    width: auto;
+    margin-right: -30px;
+    
+}
+.line{
+    margin-left: 45px;
+    margin-top: 6px;
+}
+.dislike-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+.share{
+    border: none; /* 테두리 없앰 */
+    border-radius: 18px;
+    background: #F2F2F2;
+    width: 81px;
+    height: 36px;
+    transition: background-color 0.3s ease;
+    margin-left: 50px;
+    display: flex;
+    padding: 0;
+}
+.share:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.share-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 12px;
+    
+}
+.share-text{
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 9px;
+    margin-left: 9px;
+}
+.save{
+    border: none; /* 테두리 없앰 */
+    border-radius: 18px;
+    background: #F2F2F2;
+    width: 81px;
+    height: 36px;
+    transition: background-color 0.3s ease;
+    margin-left: 16px;
+    display: flex;
+    padding: 0;
+}
+.save:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.save-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+.save-text{
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 9px;
+    margin-left: 8px;
+}
+.video-comment{
+    background-color: white;
+    display: flex;
+    width: 362px;
+    height: 73px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+}
+.comment-box{
+    cursor: pointer;
+    display: flex;
+    border-radius: 12px;
+    background: #F2F2F2;
+    width: 338px;
+    height: 45px;
+    transition: background-color 0.3s ease;
+    padding: 14px 12px;
+    flex-wrap: wrap;
+    
+}
+.comment-box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.comment-title{
+    width: 61px;
+    height: 13px;
+}
+.댓글{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    width: 61px;
+    height: 13px;
+}
+.comment-subscriber{
+    margin-top: 25px;
+    margin-left: -61px;
+    display: flex;
+}
+.profile-subscriber{
+    cursor: pointer;
+    width: 24px; /* 원의 지름을 조절 */
+    height: 24px; /* 원의 높이를 조절 (원이기 때문에 width와 height는 같게 설정하는 것이 좋음) */
+    background-color: #FF6347; /* 원의 배경 색상 */
+    border-radius: 50%; /* 원 모양을 만들기 위해 50%의 border-radius 사용 */
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+.text-inside-circle{
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+.comments{
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 3px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+.other-videos{
+    overflow: hidden;
+}
+.김치전{
+    cursor: pointer;
+    width: 393px;
+    height: 222px;
+    position: relative; /* 부모 요소를 relative로 설정 */
+    z-index: 1;
+}
+
+.toolbar{
+    position: fixed;
+    bottom: 0;
+    height: 57px;
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명한 흰 배경 */ 
+    backdrop-filter: blur(8.5px); /* 블러 효과 추가 */ /* 아래에 배치되어야 하는 요소의 배경색과 투명도 조절 */
+     /* 부모 요소에 대해 absolute로 설정하여 위치 조절 */
+    margin-top: -47px;
+    z-index: 999; /* 윗 요소보다 위에 배치되도록 순서를 부여 */
+}
+.toolbar-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 16px 42px 16px;
+    width: 361px;
+    height: 28px;
+    margin: auto;
+}
+.toolbar-icon1{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toolbar-icon1-img{
+    cursor: pointer;
+    width: 11px;
+    height: 19px;
+}
+.toolbar-icon2{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toolbar-icon2-img{
+    cursor: pointer;
+    width: 11px;
+    height: 19px;
+}
+.toolbar-icon3{
+    margin-left: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toolbar-icon3-img{
+    cursor: pointer;
+    width: 19px;
+    height: 24.25px;
+}
+.toolbar-icon4{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toolbar-icon4-img{
+    cursor: pointer;
+    width: 24px;
+    height: 20px;
+}
+.toolbar-icon5{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toolbar-icon5-img{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden; /* 열릴 때 스크롤 숨김 */
+    transition: height 0.3s; /* height 속성에 대한 트랜지션을 추가 */
+}
+
+.modal {
+background-color: #E8E8E8;
+  bottom: 0;
+  width: 393px;
+  height: 100%;
+  border-radius: 15px;
+  animation: slideUp 0.5s ease;
+  margin-top: 5%;
+  z-index: 1000;
+  
+}
+
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.open-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal-header{
+    width: 393px;
+    height: 92px;
+}
+.modal-grabber{
+    width: 36px;
+    height: 5px;
+    background-color: rgba(60, 60, 67, 0.3);
+    border-radius: 2.5px;
+    margin-left: 178px;
+    margin-top: 5px;
+}
+.modal-header-contents{
+    display: flex;
+}
+.modal-header-closeButton{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: 60px;
+    margin-top: 2px;
+    transition: filter 0.2s ease;
+}
+.modal-header-closeButton:hover {
+    filter: brightness(70%); 
+}
+.modal-header-thumbnail{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 16px;
+    margin-top: 11px;
+}
+.modal-header-contents-title{
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 200px;
+    height: 20px;
+}
+.youtube-com{
+    margin-left: 11px;
+    color: #818185;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+}
+.modal-contactRow{
+    display: flex;
+    overflow: hidden;
+    width: 393px;
+    height: 108px;
+    padding-top: 21px;
+    
+}
+.modal-profile1{
+    cursor: pointer;
+    margin-left: 16px;
+    display: flow;
+    text-align: -webkit-center;
+
+}
+
+.m-m1{
+    display: flex;
+    
+}
+.modal-profile1-img{
+    width: 62px;
+    height: 62px;
+    
+}
+.modal-message1-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: -18px;
+}
+.modal-profile1-name{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.modal-profile2{
+    cursor: pointer;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.m-m2{
+    display: flex;
+}
+.modal-profile2-img{
+    width: 62px;
+    height: 62px;
+}
+.modal-message2-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: -18px;
+}
+.modal-profile2-name{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.modal-profile3{
+    cursor: pointer;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.m-m3{
+    display: flex;
+}
+.modal-profile3-img{
+    width: 62px;
+    height: 62px;
+}
+.modal-message3-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: -18px;
+}
+.modal-profile3-name{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.modal-profile4{
+    cursor: pointer;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.m-m4{
+    display: flex;
+}
+.modal-profile4-img{
+    width: 62px;
+    height: 62px;
+}
+.modal-message4-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: -18px;
+}
+.modal-profile4-name{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.modal-profile5{
+    cursor: pointer;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.m-m5{
+    display: flex;
+}
+.modal-profile5-img{
+    width: 62px;
+    height: 62px;
+}
+.modal-message5-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: -18px;
+}
+.modal-profile5-name{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.divideLine1, .divideLine2{
+    background-color: #AAAAAC;
+    width: 393px;
+    height: 0.1px;
+}
+.modal-appIconRow{
+    display: flex;
+    width: 361px;
+    height: 80px;
+    padding: 21px 16px 28px 16px;
+    overflow: hidden;
+
+}
+.appIcon1{
+    cursor: pointer;
+    width: 60px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.airdropIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    transition: filter 0.3s; 
+}
+.airdropIcon:hover {
+    filter: brightness(70%); 
+}
+
+.airdropText{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+.appIcon2{
+    cursor: pointer;
+    width: 60px;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.요리조리Icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    transition: filter 0.3s; 
+}
+.요리조리Icon:hover {
+    filter: brightness(70%); 
+}
+.요리조리Text{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+.appIcon3{
+    cursor: pointer;
+    width: 60px;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.mailIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    transition: filter 0.3s; 
+}
+.mailIcon:hover {
+    filter: brightness(70%); 
+}
+.mailText{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+.appIcon4{
+    cursor: pointer;
+    width: 60px;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.memoIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    transition: filter 0.3s; 
+}
+.memoIcon:hover {
+    filter: brightness(70%); 
+}
+.memoText{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+.appIcon5{
+    cursor: pointer;
+    width: 60px;
+    margin-left: 26px;
+    display: flow;
+    text-align: -webkit-center;
+}
+.messageIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    transition: filter 0.3s; 
+}
+.messageIcon:hover {
+    filter: brightness(70%); 
+}
+.messageText{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+.action1{
+    width: 361px;
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.action1-1box{
+    
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-left: 16px;
+    border-radius: 10px;
+    background: #FFF;
+    transition: background-color 0.2s ease;
+}
+.action1-1box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action2-1box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action2-2box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action2-3box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action2-4box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action2-5box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action3-1box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action3-2box:hover {
+    background: #D0D0D0;
+    cursor: pointer;
+}
+.action2{
+    padding-top: 10px;
+    height: 250px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #E8E8E8;
+}
+.action2-1box{
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-left: 16px;
+    padding-bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+    background: #FFF;
+    transition: background-color 0.2s ease;
+}
+.action2-2box{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0.5px;
+    padding-left: 16px;
+    background: #FFF;
+    transition: background-color 0.2s ease;
+}
+
+.action2-3box{
+    cursor: pointer;
+    display: flex;
+    border: none;
+    align-items: flex-start;
+    width: 361px;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 50px;
+    margin-top: 0.5px;
+    padding-left: 16px;
+    background: #FFF;
+    transition: background-color 0.2s ease;
+}
+.action2-4box{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0.5px;
+    padding-left: 16px;
+    background: #FFF;
+    transition: background-color 0.2s ease;
+}
+.action2-5box{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-top: 0;
+    padding-left: 16px;
+    margin-top: 0.5px;
+    background: #FFF;
+    border-radius: 0px 0px 10px 10px;
+    transition: background-color 0.2s ease;
+}
+.action3{
+    padding-top: 10px;
+    height: 250px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #E8E8E8;
+}
+.action3-1box{
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-left: 16px;
+    padding-bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+    background: #FFF;
+    transition: background-color 0.2s ease;
+}
+.action3-2box{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    width: 361px;
+    height: 50px;
+    padding-top: 0;
+    padding-left: 16px;
+    margin-top: 0.5px;
+    background: #FFF;
+    border-radius: 0px 0px 10px 10px;
+    transition: background-color 0.2s ease;
+}
+.action1-1box-contents{
+    display: flex;
+    align-items: center;
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+    justify-content: space-between;
+}
+.action1-1box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action2-1box-contents{
+    display: flex;
+    align-items: center;
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+    justify-content: space-between;
+}
+.action2-1box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action2-2box-contents{
+    display: flex;
+    align-items: center;
+    
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+    justify-content: space-between;
+}
+.action2-2box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action2-3box-contents{
+    display: flex;
+    align-items: center;
+    
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+    justify-content: space-between;
+}
+.action2-3box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action2-4box-contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+}
+.action2-4box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action2-5box-contents{
+    display: flex;
+    align-items: center;
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+    justify-content: space-between;
+}
+.action2-5box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action3-1box-contents{
+    display: flex;
+    align-items: center;
+    
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+    justify-content: space-between;
+}
+.action3-1box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.action3-2box-contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 321px;
+    height: 40px;
+    padding: 5px 24px 5px 0px;
+}
+.action3-2box-text{
+    height: 22px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.5px;
+}
+.actions{
+    overflow: auto;
+}
+.action1-1box-icon{
+    max-width: 6.5%;
+}
+.action2-1box-icon{
+    max-width: 9.5%;
+    margin-right: -5px;
+}
+.action2-2box-icon{
+    max-width: 6.5%;
+}
+.action2-3box-icon{
+    max-width: 6.5%;
+}
+.action2-4box-icon{
+    max-width: 6.5%;
+}
+.action2-5box-icon{
+    max-width: 6.5%;
+}
+.action3-1box-icon{
+    max-width: 6.5%;
+}
+.action3-2box-icon{
+    max-width: 6.5%;
+}
+.second-popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.second-popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 393px; /* 고정된 너비 */
+    margin: 0 auto;
+    width: 190px;
+    height: 22px;
+    padding: 16px;
+    bottom: 50px; /* 더 아래쪽으로 조절 */
+    position: absolute; /* position 추가 */
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .popup-icon {
+    width: 16px;
+    height: 16px;
+    
+}
+  
+  .popup-text {
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.5px;
+    margin-left: 4px;
+  }
+  
+.close-button{
+    border: none;
+    border-radius: 60px;
+    width: 15px;
+    height: 15px;
+}
+
+.popup-background {
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 조절 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 393px;
+    height: 100%;
+    display: none; /* 기본적으로 숨겨진 상태로 설정 */
+    z-index: 9998; /* 팝업보다 낮은 z-index 값으로 설정 */
+}
+.second-popup2{
+    width: 205px;
+    height: 122px;
+    border-radius: 16px;
+    background-color: white;
+    transform: translateX(50%);
+    margin-top: 70%;
+}
+.second-popup-content2{
+    display: flex;
+    align-items: center;
+}
+.popup-icon2{
+    width: 22px;
+    height: 22px;
+    margin-top: 12px;
+    margin-left: 28px;
+}
+.popup-text2{
+    margin-top: 12px;
+    width: 105px;
+    height: 22px;
+    margin-left: 4px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.5px;
+}
+.dropdown {
+    border: none;
+    margin-left: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 26px;
+    width: 170px;
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    
+    border-radius: 10px;
+    
+  }
+  
+  .dropdown:before, .dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 4px dashed;
+    border-color: #888888 transparent;
+    pointer-events: none;
+  }
+  
+  .dropdown:before {
+    border-bottom-style: solid;
+    border-top: none;
+  }
+  
+  .dropdown:after {
+    margin-top: 7px;
+    border-top-style: solid;
+    border-bottom: none;
+  }
+  
+  .dropdown-select {
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    width: 130%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 28px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #62717a;
+    text-shadow: 0 1px white;
+    background: #f2f2f2; /* Fallback for IE 8 */
+    background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px; /* 183.333% */
+    letter-spacing: -0.5px;
+  }
+  
+  .dropdown-select:focus {
+    z-index: 3;
+    width: 100%;
+    color: #394349;
+    outline: 2px solid #49aff2;
+    outline: 2px solid -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  
+  .dropdown-select > option {
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+    background: #f2f2f2;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Fix for IE 8 putting the arrows behind the select element. */
+  
+  .lt-ie9 .dropdown {
+    z-index: 1;
+  }
+  
+  .lt-ie9 .dropdown-select {
+    z-index: -1;
+  }
+  
+  .lt-ie9 .dropdown-select:focus {
+    z-index: 3;
+  }
+.close-button2{
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    background: #D9D9D9;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+    letter-spacing: -0.5px;
+    transition: filter 0.2s ease;
+}
+.close-button2:hover{
+    filter: brightness(80%); 
+}
+.close-button3{
+    cursor: pointer;
+    border: none;
+    margin-left: 6px;
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    background: #D9D9D9;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+    letter-spacing: -0.5px;
+    transition: filter 0.2s ease;
+}
+.close-button3:hover{
+    filter: brightness(80%); 
+}
+.close-button4{
+    cursor: pointer;
+    border: none;
+    margin-left: 6px;
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    background: #D9D9D9;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+    letter-spacing: -0.5px;
+    transition: filter 0.2s ease;
+}
+.close-button4:hover{
+    filter: brightness(80%); 
+}
+.recipeSavedButtons{
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
