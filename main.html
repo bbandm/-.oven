@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>요리조리</title>
+    <link rel="icon" href="img/youtube_1384060.png" type="image/png" > 
+    <title>Youtube</title>
 </head>
 
 <body>
@@ -129,7 +130,7 @@
                         <span class="airdropText">Airdrop</span>
                     </div>
                     <div class="appIcon2" onclick="openSecondPopup()">
-                        <img src="img/요리조리.png" class="요리조리Icon">
+                        <img src="img/Group 67.png" class="요리조리Icon">
                         <span class="요리조리Text">요리조리</span>
                     </div>
                     <div class="appIcon3">
@@ -229,29 +230,54 @@
             <div class="second-popup">
             <div class="second-popup-content" id="secondPopup">
                 <img src="img/팝업아이콘.png" alt="팝업"class="popup-icon">
-                <span class="popup-text">레시피를 저장하고 있어요...</span>
+                <span class="popup-text">북마크하고 있어요...</span>
             </div>
             </div>
         </div>
         <div class="popup-background" id="newPopupBackground" style="display: none;">
             <div class="second-popup2" id="newSecondPopup">
-                <div class="second-popup-content2">
-                    <img src="img/recipeSaved.png" alt="recipe saved" class="popup-icon2">
-                    <span class="popup-text2">레시피 저장 완료!</span>
+                <div class="second-popup-header">
+                    <div class="second-popup-content2">
+                        <img src="img/recipeSaved.png" alt="recipe saved" class="popup-icon2">
+                        <span class="popup-text2">북마크 완료!</span>
+                    </div>
+                    <div class="recipeSavedButtons">
+                        <button class="close-button2">
+                            <img src="img/Back.png" alt="back" class="back" onclick="closeNewSecondPopup(),closeModal()">
+                        </button>
+                        <button class="close-button3">
+                            <img src="img/trash.png" alt="trash" class="trash">
+                        </button>
+                        <a href="app.html">
+                        <button class="close-button4" id="toGo">
+                            <span class="보러가기">보러가기</span>
+                        </button>
+                        </a>
+                    </div>
                 </div>
-                <div class="dropdown">
-                    <select name="one" class="dropdown-select">
-                      <option value="">기본 폴더</option>
-                      <option value="1">비건</option>
-                      <option value="2">다이어트</option>
-                      <option value="3">디저트</option>
-                    </select>
+                <div class="divideLine3"></div>
+                <div class="folderss">
+                    <div class="기본폴더">
+                        <div class="folder2-box2" onclick="check()">
+                        <img src="img/check.png" alt="" class="check-icon" id="check-icon" style="display: none;"></div>
+                        <span class="기본폴더-text">기본폴더</span>
+                    </div>
+                    <div class="도시락">
+                        <div class="folder3-box2"></div>
+                        <span class="도시락-text">도시락</span>
+                    </div>
+                    <div class="베이킹">
+                        <div class="folder4-box2"></div>
+                        <span class="베이킹-text">밀키트</span>
+                    </div>
+                    <div class="새폴더추가">
+                        
+                        <img src="img/Folder Image.png" alt="새 폴더 추가" class="새폴더추가-icon">
+                        <span class="새폴더추가-text">새 폴더 추가</span>
+                    </div>
                 </div>
-                <div class="recipeSavedButtons">
-                    <button class="close-button2">삭제</button>
-                    <button class="close-button3">수정</button>
-                    <button class="close-button4" onclick="closeNewSecondPopup()">확인</button>
-                </div>
+                
+                
             </div>
         </div>
        
@@ -259,6 +285,10 @@
 
 
     </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
     <script src="script.js"></script>
 </body>
 
