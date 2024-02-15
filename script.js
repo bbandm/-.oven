@@ -79,15 +79,22 @@ function openSecondPopup() {
   var newPopupBackground = document.getElementById("newPopupBackground");
   var newSecondPopup = document.getElementById("newSecondPopup");
 
-  popupBackground.style.display = "block";
-  secondPopup.style.display = "block";
-
-  // 5초 후에 첫 번째 팝업을 자동으로 닫고 두 번째 팝업을 열기
-  setTimeout(function () {
-      closeSecondPopup(); // 첫 번째 팝업을 닫음
+  setTimeout(function() {
+    popupBackground.style.display = "block";
+    secondPopup.style.display = "block";
+    
+    // 3초 후에 첫 번째 팝업 닫기 및 두 번째 팝업 열기
+    setTimeout(function () {
+      closeFirstPopup(); // 첫 번째 팝업을 닫는 함수가 있다고 가정
       newPopupBackground.style.display = "block";
       newSecondPopup.style.display = "block";
+    }, 2000);
+
   }, 1500);
+}
+function closeFirstPopup() {
+  newPopupBackground.style.display = "none";
+      newSecondPopup.style.display = "none";
 }
 
 function closeSecondPopup() {
@@ -108,3 +115,8 @@ function closeNewSecondPopup() {
 
 
 
+function check(){
+  var checkIcon  = document.getElementById('check-icon');
+
+  checkIcon.style.display = "block";
+}
