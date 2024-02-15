@@ -1,7 +1,7 @@
 # 
 <div align="center">
 <h2>TEAM NAME: OVEN<br>
-    SEVICE NAME: 요리조리
+    SERVICE NAME: 요리조리
 </h2>
 다양한 플랫폼의 레시피에서 밀키트까지 한 번에 정리해 식단을 계획할 수 있는 서비스 
 </div>
