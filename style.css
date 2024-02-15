@@ -1,4 +1,8 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+
+
 
 body {
     display: flex;
@@ -467,12 +471,9 @@ background-color: #E8E8E8;
   height: 100%;
   border-radius: 15px;
   animation: slideUp 0.5s ease;
-  margin-top: 5%;
+  margin-top: 50%;
   z-index: 1000;
-  
 }
-
-
 
 @keyframes slideUp {
   from {
@@ -733,6 +734,7 @@ background-color: #E8E8E8;
     text-align: -webkit-center;
 }
 .요리조리Icon{
+    cursor: pointer;
     width: 60px;
     height: 60px;
     border-radius: 15px;
@@ -747,6 +749,7 @@ background-color: #E8E8E8;
     font-weight: 400;
 }
 .appIcon3{
+    cursor: pointer;
     cursor: pointer;
     width: 60px;
     margin-left: 26px;
@@ -1168,7 +1171,24 @@ background-color: #E8E8E8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 393px; /* 고정된 너비 */
     margin: 0 auto;
-    width: 190px;
+    width: 147px;
+    height: 22px;
+    padding: 16px;
+    bottom: 50px; /* 더 아래쪽으로 조절 */
+    position: absolute; /* position 추가 */
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .second-popup-content-s {
+    background: #fff;
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 393px; /* 고정된 너비 */
+    margin: 0 auto;
+    width: 109px;
     height: 22px;
     padding: 16px;
     bottom: 50px; /* 더 아래쪽으로 조절 */
@@ -1215,196 +1235,1662 @@ background-color: #E8E8E8;
     display: none; /* 기본적으로 숨겨진 상태로 설정 */
     z-index: 9998; /* 팝업보다 낮은 z-index 값으로 설정 */
 }
-.second-popup2{
-    width: 205px;
-    height: 122px;
-    border-radius: 16px;
+.second-popup2 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 207px;
+    border-radius: 16px 16px 0px 0px;
     background-color: white;
-    transform: translateX(50%);
-    margin-top: 70%;
+    transform: translateX(0%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .second-popup-content2{
+    margin-top: 20px;
     display: flex;
     align-items: center;
 }
 .popup-icon2{
     width: 22px;
     height: 22px;
-    margin-top: 12px;
+    margin-top: 2px;
     margin-left: 28px;
 }
 .popup-text2{
-    margin-top: 12px;
-    width: 105px;
-    height: 22px;
-    margin-left: 4px;
-    color: #000;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Pretendard;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px; /* 137.5% */
-    letter-spacing: -0.5px;
-}
-.dropdown {
-    border: none;
-    margin-left: 14px;
-    margin-top: 10px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    height: 26px;
-    width: 170px;
-    background: #fff;
-    border: 1px solid #D9D9D9;
-    
-    border-radius: 10px;
-    
-  }
-  
-  .dropdown:before, .dropdown:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 9px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 4px dashed;
-    border-color: #888888 transparent;
-    pointer-events: none;
-  }
-  
-  .dropdown:before {
-    border-bottom-style: solid;
-    border-top: none;
-  }
-  
-  .dropdown:after {
-    margin-top: 7px;
-    border-top-style: solid;
-    border-bottom: none;
-  }
-  
-  .dropdown-select {
-    align-items: center;
-    justify-content: center;
-    border: none;
-    position: relative;
-    width: 130%;
-    margin: 0;
-    padding: 6px 8px 6px 10px;
-    height: 28px;
-    line-height: 14px;
-    font-size: 12px;
-    color: #62717a;
-    text-shadow: 0 1px white;
-    background: #f2f2f2; /* Fallback for IE 8 */
-    background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
-    border: 0;
-    border-radius: 0;
-    -webkit-appearance: none;
+    width: 146px;
+    height: 38px;
+    margin-top: 16px;
+    margin-left: 8px;
     color: var(--dark-grey, #333);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Pretendard;
-    font-size: 12px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 10px; /* 183.333% */
+    font-weight: 700;
+    line-height: 22px; /* 100% */
     letter-spacing: -0.5px;
-  }
-  
-  .dropdown-select:focus {
-    z-index: 3;
-    width: 100%;
-    color: #394349;
-    outline: 2px solid #49aff2;
-    outline: 2px solid -webkit-focus-ring-color;
-    outline-offset: -2px;
-  }
-  
-  .dropdown-select > option {
-    margin: 3px;
-    padding: 6px 8px;
-    text-shadow: none;
-    background: #f2f2f2;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  /* Fix for IE 8 putting the arrows behind the select element. */
-  
-  .lt-ie9 .dropdown {
-    z-index: 1;
-  }
-  
-  .lt-ie9 .dropdown-select {
-    z-index: -1;
-  }
-  
-  .lt-ie9 .dropdown-select:focus {
-    z-index: 3;
-  }
+}
+
 .close-button2{
+    margin-top: 16px;
     cursor: pointer;
     border: none;
-    width: 50px;
-    height: 25px;
-    border-radius: 10px;
-    background: #D9D9D9;
-    font-family: Pretendard;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px; /* 183.333% */
-    letter-spacing: -0.5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 16px;
+    background: var(--soft-grey, #D3D3D3);
     transition: filter 0.2s ease;
+    margin-left: 12px;
 }
 .close-button2:hover{
     filter: brightness(80%); 
 }
 .close-button3{
+    margin-top: 16px;
     cursor: pointer;
     border: none;
     margin-left: 6px;
-    width: 50px;
-    height: 25px;
-    border-radius: 10px;
-    background: #D9D9D9;
-    font-family: Pretendard;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px; /* 183.333% */
-    letter-spacing: -0.5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 16px;
+    background: var(--soft-grey, #D3D3D3);
     transition: filter 0.2s ease;
 }
 .close-button3:hover{
     filter: brightness(80%); 
 }
 .close-button4{
+    margin-top: 16px;
     cursor: pointer;
     border: none;
-    margin-left: 6px;
-    width: 50px;
-    height: 25px;
-    border-radius: 10px;
-    background: #D9D9D9;
-    font-family: Pretendard;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px; /* 183.333% */
-    letter-spacing: -0.5px;
+    margin-left: 8px;
+    width: 80px;
+    height: 36px;
+    border-radius: 16px;
+    background: #FF6347;
     transition: filter 0.2s ease;
 }
 .close-button4:hover{
     filter: brightness(80%); 
+}
+.보러가기{
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
 }
 .recipeSavedButtons{
     margin-top: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.back{
+    width: 24px;
+    height: 24px;
+}
+.trash{
+    width: 24px;
+    height: 24px;
+}
+.second-popup-header{
+    display: flex;
+}
+.divideLine3{
+    width: 100%;
+    height: 0.5px;
+    background-color: #394349;
+    opacity: 50%;
+    margin-top: 15px;
+}
+.folderss{
+    display: flex;
+    width: 361px;
+    height: 80px;
+    padding: 21px 16px 28px 16px;
+    align-items: center;
+}
+.기본폴더{
+    cursor: pointer;
+    display: grid;
+}
+.기본폴더-icon{
+    width: 60px;
+    height:60px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    
+}
+
+.기본폴더-text{
+    margin-top: 7px;
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px; /* 118.182% */
+    letter-spacing: -0.4px;
+}
+.도시락{
+    display: grid;
+    margin-left: 16px;
+}
+.도시락-icon{
+    width: 60px;
+    height:60px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+}
+
+
+.도시락-text{
+    margin-top: 7px;
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px; /* 118.182% */
+    letter-spacing: -0.4px;
+}
+.베이킹{
+    display: grid;
+    margin-left: 16px;
+}
+.베이킹-icon{
+    width: 60px;
+    height:60px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+}
+
+.베이킹-text{
+    margin-top: 7px;
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px; /* 118.182% */
+    letter-spacing: -0.4px;
+}
+.새폴더추가{
+    display: grid;
+    margin-left: 16px;
+}
+.새폴더추가-icon{
+    width: 60px;
+    height:60px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+ 
+
+.새폴더추가-text{
+    margin-top: 7px;
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px; /* 118.182% */
+    letter-spacing: -0.4px;
+}
+.새폴더{
+    display: flex;
+    justify-content: center;
+}
+.app-header{
+    width: 361px;
+    height: 40px;
+    padding: 12px 16px 12px 16px;
+    background-color: white;
+}
+.app-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.요리조리-icon{
+    cursor: pointer;
+    width: 90px;
+    height: 21.5px;
+}
+.alarm-box{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0.5px solid var(--soft-grey, #D3D3D3);
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
+}
+.alarm-icon{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.app-bookmarkPlus{
+    width: 3614x;
+    height: 80px;
+    padding: 16px 16px 8px 16px;
+    background-color: white;
+}
+.app-bookmarkPlus-box{
+    display: flex;
+    
+    margin-top: 4px;
+    
+}
+.app-bookmarkPlus-box-1{
+    cursor: pointer;
+    display: flex;
+    width: 136px;
+    height: 22px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: var(--tomato-red, #FF6347);
+}
+.app-bookmarkPlus-box-2{
+    cursor: pointer;
+    display: flex;
+    width: 136px;
+    height: 22px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: var(--tomato-red, #FF6347);
+    margin-left: 12px;
+}
+.북마크추가{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "GmarketSans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+    
+   
+}
+.url-icon{
+    width: 20px;
+    height: 20px;
+}
+.url-text{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 137.5% */
+    margin-left: 4px;
+}
+.image-icon{
+    width: 20px;
+    height: 20px;
+}
+.image-text{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 137.5% */
+    margin-left: 4px;
+}
+.image-icon{
+    width: 20px;
+    height: 20px;
+}
+.app-folders{
+    display: flex;
+    width: 345px;
+    height: 70px;
+    padding: 8px 8px 8px 0;
+    align-items: flex-start;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0);
+}
+.folders{
+   display: block;
+padding: 16px 16px 8px 16px;
+
+}
+.내레시피폴더{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "GmarketSans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+}
+.folder1{
+    width: 58px;
+    height: 80px;
+    
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.plusIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+}
+.folder1-box{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.folder1-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+    margin-left: -2px;
+}
+.folder2{
+    cursor: pointer;
+    width: 50px;
+    height: 80px;
+    margin-left: 0px;
+    
+    text-align: center;
+    
+    
+}
+.folder2-box{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background: #8FCC8F;
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    
+}
+.folder2-box2{
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: rgba(255, 99, 71, 0.3);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    
+    
+}
+
+.check-icon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px 15px 15px;
+}
+.folder2-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+    
+}
+
+.folder3{
+    cursor: pointer;
+    width: 50px;
+    height: 80px;
+    margin-left: 8px;
+    
+    text-align: center;
+}
+.folder3-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background: #8FCC8F;
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.folder3-box2{
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.folder3-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+    
+}
+.folder4{
+    cursor: pointer;
+    width: 50px;
+    height: 80px;
+    margin-left: 8px;
+    
+    text-align: center;
+}
+.folder4-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background: #8FCC8F;
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.folder4-box2{
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.folder4-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+}
+.recentBookmark{
+    
+    background-color: white;
+    display: block;
+    width: 361px;
+    height: 420px;
+    overflow: auto;
+    
+    justify-content: center;
+    padding: 16px;
+    bottom: 10%;
+    border-radius: 16px;
+}
+.최근북마크한레시피{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "GmarketSans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137 5% */
+    
+    
+}
+
+.firstBookmark{
+    display: flex;
+    margin-top: 11px;
+}
+.firstBookmark-1{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    
+    
+}
+.firstBookmark-1-img{
+    width: 170px;
+    height: 96px;
+    cursor: pointer;
+}
+.firstBookmark-1-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.firstBookmark-2{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    
+    margin-left: 16px;
+}
+.bookmark-icon{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px; 
+}
+
+.firstBookmark-1-box{
+    position: relative;
+    width: 170px;
+    height: 96px;
+    background: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.firstBookmark-2-box{
+    position: relative;
+    width: 170px;
+    height: 96px;
+    background: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.secondBookmark-1-box{
+    position: relative;
+    width: 170px;
+    height: 96px;
+    background: var(--dark-grey, #333);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.secondBookmark-2-box{
+    position: relative;
+    width: 170px;
+    height: 96px;
+    background: var(--dark-grey, #333);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.thirdBookmark-1-box{
+    position: relative;
+    width: 170px;
+    height: 96px;
+    background: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.thirdBookmark-2-box{
+    position: relative;
+    width: 170px;
+    height: 96px;
+    background: var(--dark-grey, #333);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.firstBookmark-2-img{
+    width: 170px;
+    height: 96px;
+    cursor: pointer;
+}
+.firstBookmark-2-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.secondBookmark{
+    display: flex;
+    margin-top: 3px;
+}
+.secondBookmark-1{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    
+   
+}
+.secondBookmark-1-img{
+    width: 77.143px;
+    height: 96px;
+    cursor: pointer;
+    
+}
+.secondBookmark-1-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.secondBookmark-2{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    
+    margin-left: 16px;
+}
+.secondBookmark-2-img{
+    
+   
+    width: 54px;
+    height: 96px;
+
+    cursor: pointer;
+}
+.secondBookmark-2-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.thirdBookmark{
+    display: flex;
+    margin-top: 3px;
+}
+.thirdBookmark-1{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    
+    
+}
+.thirdBookmark-1-img{
+    width: 170px;
+    height: 96px;
+    cursor: pointer;
+}
+.thirdBookmark-1-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.thirdBookmark-2{
+   
+    
+    margin-left: 16px;
+}
+.thirdBookmark-2-img{
+    width: 96px;
+    height: 96px;
+
+    cursor: pointer;
+}
+.thirdBookmark-2-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.bottomBar{
+    width: 363px;
+    height: 30px;
+    padding: 13px 15px 30px 15px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: white;
+    border: 0.5px solid var(--soft-grey, #D3D3D3);
+    bottom: 0px;
+    position: fixed;
+    margin-top: 24px;
+    justify-content: space-between;
+    display: flex;
+}
+.bottomBar-1{
+    width: 26px;
+    height: 38px;
+    padding: 2px 11px 0px 11px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.bottomBar-1-icon{
+    width: 14px;
+    height: 20px;
+}
+.bottomBar-1-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+   
+}
+.bottomBar-2{
+    width: 24px;
+    height: 40px;
+    padding: 0px 12px 0px 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.bottomBar-2-icon{
+    width: 24px;
+    height: 24px;
+}
+.bottomBar-2-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
+.bottomBar-3{
+    width: 29px;
+    height: 38px;
+    padding: 2px 9px 0px 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    display: grid; 
+    place-items: center;
+}
+.bottomBar-3-icon{
+    width: 20px;
+    height: 20px;
+}
+.bottomBar-3-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 29px;
+    height: 12px;
+    margin-top: 8px;
+}
+.bottomBar-4{
+    width: 35px;
+    height: 40px;
+    padding: 0px 6px 0px 7px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.bottomBar-4-icon{
+    width: 24px;
+    height: 24px;
+}
+.bottomBar-4-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
+.bottomBar-5{
+    width: 46px;
+    height: 40px;
+    padding: 0px 1px 0px 1px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    
+}
+.bottomBar-5-icon{
+    width: 24px;
+    height: 24px;
+}
+.bottomBar-5-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
+.overlay2 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden; /* 열릴 때 스크롤 숨김 */
+    transition: height 0.3s; /* height 속성에 대한 트랜지션을 추가 */
+}
+.modal2 {
+    background-color: #FFFFFF;
+      bottom: 0;
+      width: 393px;
+      height: 100%;
+      border-radius: 15px;
+      animation: slideUp 0.5s ease;
+      margin-top: 50%;
+      z-index: 10000;
+    }
+
+.popup-background2 {
+        background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 조절 */
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 393px;
+        height: 100%;
+        display: none; /* 기본적으로 숨겨진 상태로 설정 */
+        z-index: 9998; /* 팝업보다 낮은 z-index 값으로 설정 */
+    }
+.modal-header2-grabber{
+        width: 36px;
+        height: 5px;
+        background-color: rgba(60, 60, 67, 0.3);
+        border-radius: 2.5px;
+        margin-left: 178px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+.modal-header2{
+        width: 361px;
+        height: 68px;
+        padding: 4px 16px 0px 16px;
+    }
+.modal-header2-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header2-취소{
+        cursor: pointer;
+        margin-top: 18px;
+        color: var(--dark-grey, #333);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+    }
+.modal-header2-저장{
+    cursor: pointer;
+    margin-top: 18px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    }
+
+.modal2-contents{
+    width: 361px;
+    height: 30px;
+    padding: 32px 16px 8px 16px;
+    cursor: pointer;
+}
+.modal2-contents-title::placeholder {
+    color: var(--dark-grey-30, rgba(51, 51, 51, 0.30));
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 91.667% */
+  }
+  .modal2-contents-title {
+    width: 361px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(60, 60, 67, 0.36);
+    outline: none;
+    color: black;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 91.667% */
+}
+.modal-contents2{
+    
+}
+.modal-contents2-1{
+    width: 361px;
+    height: 26px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: white;
+    gap: 8px;
+    position: relative;
+}
+.modal-contents2-2{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+}
+.modal-contents2-3{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+.modal-contents2-4{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+.modal-contents2-5{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+.modal-contents2-6{
+    width: 361px;
+    height: 38px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+.modal-contents2-1-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-contents2-2-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-contents2-3-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-contents2-4-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-contents2-5-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-contents2-6-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-contents2-6-icon2{
+    width: 16px;
+    height: 16px;
+}
+.modal-contents2-1-text{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+}
+.modal-contents2-2-text{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 183.333% */
+    text-decoration-line: underline;
+}
+.modal-contents2-3-text{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+}
+.modal-contents2-4-text{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+}
+.modal-contents2-5-text{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+}
+.modal-contents2-6-text{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 183.333% */
+}
+.modal-contents2-6-button{
+    display: flex;
+    width: 54px;
+    height: 22px;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 18px;
+    border: 1px solid var(--soft-grey, #D3D3D3);
+    background: var(--soft-grey-30, rgba(211, 211, 211, 0.30));
+}
+.modal-contents2-1-folders{
+    width: 49px;
+    height: 22px;
+    padding: 2px 16px 2px 16px;
+    border-radius: 10px;
+    background: var(--tomato-red, #FF6347);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 16px;
+   
+}
+.modal-contents2-1-folders-text{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 169.231% */
+}
+.modal-contents2-icon{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+}
+.overlay3 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden; /* 열릴 때 스크롤 숨김 */
+    transition: height 0.3s; /* height 속성에 대한 트랜지션을 추가 */
+}
+.modal3 {
+    background-color: white;
+      bottom: 0;
+       width: 393px;
+    height: 100%;
+    border-radius: 15px 15px 0px 0px;
+    animation: slideUp 0.5s ease;
+    margin-top: 85%; /* 적절한 위치로 조절 */
+      z-index: 10000;
+    }
+
+.popup-background3 {
+        background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 조절 */
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 393px;
+        height: 100%;
+        display: none; /* 기본적으로 숨겨진 상태로 설정 */
+        z-index: 9998; /* 팝업보다 낮은 z-index 값으로 설정 */
+}
+.modal-header3{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    justify-content: center;
+    align-items: center;
+}
+.modal-header3-contents{
+    width: 361px;
+    height: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.modal-header3-contents-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 183.333% */
+    cursor: pointer;
+}
+.modal-header3-contents-icon{
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.modal-plus3{
+    display: flex;
+    padding: 8px 16px;
+    width: 360px;
+    height: 38px;
+    gap: 12px;
+    align-items: center;
+}
+.modal-plus3-icon{
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255, 99, 71, 1);
+    border-radius: 70%;
+}
+.modal-plus3-title{
+    width: 300px;
+    height: 22px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #D3D3D3;
+    outline: none;
+    color: black;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+}
+.modal-plus3-title::placeholder{
+    color: #D3D3D3;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+}
+#output {
+    margin-left: 53px;
+    max-height: 331px;
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 324px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    width: 84px;
+    height: 24px;
+    position: relative;
+    padding: 8px 12px;
+    align-items: center;
+    
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px; /* 157.143% */
+    position: relative;
+   
+}
+.list-remove{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+}
+.keyboard-iphone{
+    width: 393px;
+    height: 288px;
+    bottom: 0px;
+    position: absolute;
+    transition: height 0.3s ease;
+}
+
+
+.overlay5 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden; /* 열릴 때 스크롤 숨김 */
+    transition: height 0.3s; /* height 속성에 대한 트랜지션을 추가 */
+}
+.modal5 {
+    background-color: white;
+      bottom: 0;
+      width: 393px;
+      height: 100%;
+      border-radius: 15px 15px 0px 0px;
+      animation: slideUp 0.5s ease;
+      margin-top: 120%;
+      z-index: 10000;
+    }
+
+.popup-background5 {
+        background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 조절 */
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 393px;
+        height: 100%;
+        display: none; /* 기본적으로 숨겨진 상태로 설정 */
+        z-index: 9998; /* 팝업보다 낮은 z-index 값으로 설정 */
+}
+.modal-header5{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    justify-content: center;
+    align-items: center;
+}
+.modal-header5-contents{
+    width: 361px;
+    height: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.modal-header5-contents-text{
+    cursor: pointer;
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 183.333% */
+}
+.modal-header5-contents-icon{
+    cursor: pointer;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    margin-top: 4px;
+}
+.modal-memo5{
+    display: flex;
+    padding: 8px 16px;
+    width: 337px;
+    height: 50px;
+    gap: 10px;
+    border-radius: 10px;
+    margin-left: 12px;
+    background: var(--soft-grey-30, rgba(211, 211, 211, 0.30));
+    outline: none;
+    border: none;
+}
+
+.modal-memo5-title{
+    white-space: pre-wrap;
+    width: 337px;
+    height: 50px;
+    padding-top: 8px;
+    position: relative;
+    top: -16px;
+    border: none;
+    outline: none;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; 
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+.modal-memo5-title-container {
+    position: relative;
+    align-items: flex-start;
+}
+
+.modal-memo5-title::placeholder{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    position: relative;
+    top: -2px; /* 높이 조절값 조정 가능 */
+    z-index: 1;
+}
+#output5 {
+    margin-left: 53px;
+    max-height: 331px;
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 324px;
+}
+.keyboard-iphone2{
+    width: 393px;
+    height: 288px;
+    bottom: 0px;
+    position: absolute;
+    transition: height 0.3s ease;
+}
+
+.overlay4 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden; /* 열릴 때 스크롤 숨김 */
+    transition: height 0.3s; /* height 속성에 대한 트랜지션을 추가 */
+}
+.modal4 {
+    background-color: white;
+      bottom: 0;
+       width: 393px;
+    height: 100%;
+    border-radius: 15px 15px 0px 0px;
+    animation: slideUp 0.5s ease;
+    margin-top: 85%; /* 적절한 위치로 조절 */
+      z-index: 10000;
+    }
+
+.popup-background4 {
+        background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 조절 */
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 393px;
+        height: 100%;
+        display: none; /* 기본적으로 숨겨진 상태로 설정 */
+        z-index: 9998; /* 팝업보다 낮은 z-index 값으로 설정 */
+}
+.modal-header4{
+    width: 361px;
+    height: 24px;
+    padding: 12px 16px 12px 16px;
+    justify-content: center;
+    align-items: center;
+}
+.modal-header4-contents{
+    width: 361px;
+    height: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.modal-header4-contents-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 183.333% */
+    cursor: pointer;
+}
+.modal-hashtag{
+    width: 361px;
+    height: 86px;
+    padding: 8px 16px 100px 16px;
+    gap: 16px;
+    background-color: white;
+    margin-left: -16px;
+}
+#output-h {
+    margin-top: 20px;
+}
+
+.ul2 {
+    list-style-type: none;
+    padding: 0;
+}
+.li2 {
+    display: ruby;
+    
+    align-items: center;
+    color: var(--dark-grey, #333);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Pretendard;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 183.333% */
+align-self: center;
+flex-wrap: wrap;
+gap: 4px;
+}
+.li2-container {
+    margin-left: 4px;
+    gap: 4px;
+    border-radius: 18px;
+    border: 1px solid var(--soft-grey, #D3D3D3);
+    background: rgba(143, 204, 143, 0.70);
+    margin-bottom: 5px;
+    padding: 4px 4px 4px 12px;
+    height: 24px;
+    align-items: center;
+    display: flex;
+}
+.li2 img {
+    width: 24px;
+    height: 24px;
+}
+#textInput-h{
+    width: 337px;
+    height: 22px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    align-items: center;
+    background: var(--soft-grey-30, rgba(211, 211, 211, 0.30));
+    border: none;
+    outline: none;
+    margin-top: 8px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 91.667% */
+}
+#textInput-h::placeholder{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 91.667% */
+    transform: translateY(4px);
+}
+#textInput-h::placeholder {
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px; /* 입력란의 높이와 동일하게 설정 */
+}
+
+#output-h{
+    max-height: 132px;
+    align-self: auto;
+}
+
+.recentHashtags{
+    width: 393px;
+    height: 110px;
+   margin-left: -16px;
 }
