@@ -1,0 +1,635 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pretendard'
+}
+.main {
+    width: 393px;
+    height: 100vh;
+    position: realtive;
+    background-color: #ffffff; /* Optional: Add border for better visibility */
+}
+.status_bar {
+    display: flex;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+#currentTime{
+    width: 138px;
+    height: 22px;
+    color: white;
+    font-size: 16px;
+    font-weight: 590;
+    text-align: center;
+    padding-top: 12px;
+}
+.statusBar-icon{
+    margin-left: 112px;
+    width: 143px;
+    height: 54px;
+    margin-top: -6px;
+}
+.app-header{
+    width: 361px;
+    height: 40px;
+    padding: 12px 16px 12px 16px;
+    background-color: white;
+}
+.app-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.요리조리-icon{
+    cursor: pointer;
+    width: 90px;
+    height: 21.5px;
+}
+.alarm-box{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0.5px solid var(--soft-grey, #D3D3D3);
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
+}
+.alarm-icon{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.app-bookmarkPlus{
+    width: 3614x;
+    height: 80px;
+    padding: 16px 16px 8px 16px;
+    background-color: white;
+}
+.app-bookmarkPlus-box{
+    display: flex;
+    
+    margin-top: 4px;
+    
+}
+.app-bookmarkPlus-box-1{
+    display: flex;
+    width: 136px;
+    height: 22px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: var(--tomato-red, #FF6347);
+}
+.app-bookmarkPlus-box-2{
+    display: flex;
+    width: 136px;
+    height: 22px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: var(--tomato-red, #FF6347);
+    margin-left: 12px;
+}
+.북마크추가{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "GmarketSans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+    
+   
+}
+.url-icon{
+    width: 20px;
+    height: 20px;
+}
+.url-text{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 137.5% */
+    margin-left: 4px;
+}
+.image-icon{
+    width: 20px;
+    height: 20px;
+}
+.image-text{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 137.5% */
+    margin-left: 4px;
+}
+.image-icon{
+    width: 20px;
+    height: 20px;
+}
+.app-folders{
+    display: flex;
+    width: 345px;
+    height: 70px;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 4px;
+    background: rgba(143, 204, 143, 0.40);
+}
+.folders{
+   display: block;
+padding: 16px 16px 8px 16px;
+
+}
+.내레시피폴더{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "GmarketSans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+}
+.folder1{
+    width: 58px;
+    height: 80px;
+    
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.plusIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+}
+.folder1-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+.folder1-box:hover{
+    background-color: rgba(255, 99, 71, 0.3);
+    border-radius: 18px;
+    
+}
+.folder1-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+    margin-left: -2px;
+}
+.folder2{
+    width: 50px;
+    height: 80px;
+    margin-left: 0px;
+    
+    text-align: center;
+    
+    
+}
+.folder2-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    
+}
+.folder2-box:hover{
+    background-color: rgba(255, 99, 71, 0.3);
+    border-radius: 18px;
+    
+}
+.folder2-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+    
+}
+
+.folder3{
+    width: 50px;
+    height: 80px;
+    margin-left: 8px;
+    
+    text-align: center;
+}
+.folder3-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    
+}
+.folder3-box:hover{
+    background-color: rgba(255, 99, 71, 0.3);
+    border-radius: 18px;
+    
+}
+.folder3-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+    
+}
+.folder4{
+    width: 50px;
+    height: 80px;
+    margin-left: 8px;
+    
+    text-align: center;
+}
+.folder4-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--dark-grey, #333);
+    transition: background-color 0.3s ease;
+    
+}
+.folder4-box:hover{
+    background-color: rgba(255, 99, 71, 0.3);
+    border-radius: 18px;
+    
+}
+.folder4-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 200% */
+    width: 60px;
+    height: 22px;
+}
+.recentBookmark{
+    
+    background-color: white;
+    display: block;
+    width: 361px;
+    height: 420px;
+    overflow: auto;
+    
+    justify-content: center;
+    padding: 16px;
+    bottom: 10%;
+    border-radius: 16px;
+}
+.최근북마크한레시피{
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "GmarketSans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+    
+    
+}
+
+.firstBookmark{
+    display: flex;
+    margin-top: 11px;
+}
+.firstBookmark-1{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    text-align: center;
+    
+}
+.firstBookmark-1-img{
+    width: 160px;
+    height: 90px;
+    
+}
+.firstBookmark-1-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.firstBookmark-2{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10px;
+}
+.firstBookmark-2-img{
+    width: 160px;
+    height: 90px;
+    
+}
+.firstBookmark-2-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.secondBookmark{
+    display: flex;
+    margin-top: 3px;
+}
+.secondBookmark-1{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5px;
+}
+.secondBookmark-1-img{
+    width: 160px;
+    height: 90px;
+    
+}
+.secondBookmark-1-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.secondBookmark-2{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10px;
+}
+.secondBookmark-2-img{
+    width: 160px;
+    height: 90px;
+    
+}
+.secondBookmark-2-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.thirdBookmark{
+    display: flex;
+    margin-top: 3px;
+}
+.thirdBookmark-1{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5px;
+}
+.thirdBookmark-1-img{
+    width: 160px;
+    height: 90px;
+    
+}
+.thirdBookmark-1-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.thirdBookmark-2{
+    display: grid;
+    height: 113.5px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10px;
+}
+.thirdBookmark-2-img{
+    width: 160px;
+    height: 90px;
+    
+}
+.thirdBookmark-2-text{
+    width: 160px;
+    height: 22px;
+    color: var(--dark-grey, #333);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 183.333% */
+}
+.bottomBar{
+    width: 363px;
+    height: 40px;
+    padding: 13px 15px 30px 15px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: white;
+    border: 0.5px solid var(--soft-grey, #D3D3D3);
+    bottom: 0px;
+    position: fixed;
+    margin-top: 24px;
+    justify-content: space-between;
+    display: flex;
+}
+.bottomBar-1{
+    width: 26px;
+    height: 38px;
+    padding: 2px 11px 0px 11px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    
+}
+.bottomBar-1-icon{
+    width: 14px;
+    height: 20px;
+}
+.bottomBar-1-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+   
+}
+.bottomBar-2{
+    width: 24px;
+    height: 40px;
+    padding: 0px 12px 0px 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.bottomBar-2-icon{
+    width: 24px;
+    height: 24px;
+}
+.bottomBar-2-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
+.bottomBar-3{
+    width: 29px;
+    height: 38px;
+    padding: 2px 9px 0px 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    display: grid; 
+    place-items: center;
+}
+.bottomBar-3-icon{
+    width: 20px;
+    height: 20px;
+}
+.bottomBar-3-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 29px;
+    height: 12px;
+    margin-top: 8px;
+}
+.bottomBar-4{
+    width: 35px;
+    height: 40px;
+    padding: 0px 6px 0px 7px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.bottomBar-4-icon{
+    width: 24px;
+    height: 24px;
+}
+.bottomBar-4-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
+.bottomBar-5{
+    width: 46px;
+    height: 40px;
+    padding: 0px 1px 0px 1px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+    
+}
+.bottomBar-5-icon{
+    width: 24px;
+    height: 24px;
+}
+.bottomBar-5-text{
+    color: var(--dark-grey, #333);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
